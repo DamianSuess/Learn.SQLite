@@ -1,35 +1,28 @@
 # Overview
-Tests the various SQLite NuGets for mobile (Xamarin) development
+Tests the various C# SQLite NuGets for mobile development with Xamarin
+
+We're focusing on regular SQLite and with SQLCipher.
 
 ## Types of Tests
 
 | Test | Active | Link |
 |------|--------|------|
 | Test.UTSqliteNet        | Yes | https://github.com/praeclarum/sqlite-net/ |
-| Test.UTSqliteNetCipher  | 50% | https://www.nuget.org/packages/sqlite-net-sqlcipher |
-| Test.UTSqlitePcl        | ToDo | https://github.com/ericsink/SQLitePCL.raw |
+| Test.UTSqliteNetCipher  | Yes | https://www.nuget.org/packages/sqlite-net-sqlcipher |
+| Test.UTSqlitePcl        | *ToDo* | https://github.com/ericsink/SQLitePCL.raw |
 
 
-## Dev Notes
-* Classic
-    * Good for large file transfers
-    * Eats battery life
-* Bluetooth LE
-    * Can only send 20b packets at a time. Yes, bytes! Great for small packets, not large transfers
+## SQLiteNet
 
 
-## References
+## SQLitePCLRaw
+Maintained by Eric Sink, this is a raw implementation for SQLite and is not recommended for novice users.
 
-### Android
-* [How to detect BT devices - Xamain.Android](https://jeremylindsayni.wordpress.com/2018/12/16/how-to-detect-nearby-bluetooth-devices-with-net-and-xamarin-android/)
-    * [github example](https://github.com/jeremylindsayni/Xamarin.Android.BluetoothDeviceScanner)
-* [XF Barcode scanner](https://acaliaro.wordpress.com/2017/02/07/connect-a-barcode-reader-to-a-xamarin-forms-app-via-bluetooth/)
-    * https://github.com/acaliaro/TestBth
+To use you'll need the following NuGet packages:
+* SQLitePCLRaw.core
+* SQLitePCLRaw.provider.*
 
-### UWP
-* https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BluetoothRfcommChat
-* https://forums.xamarin.com/discussion/149314/bluetooth-classic-example-with-xamarin-for-uwp-rfcomm
 
-### Misc
-* [Control RPI with Xamarin.BT](https://blog.iamlevi.net/2017/05/control-raspberry-pi-android-bluetooth/)
-    * https://github.com/levifuksz/raspibt
+### Notes from NuGet
+SQLitePCL.raw is a Portable Class Library (PCL) for low-level (raw) access to SQLite.  This package does not provide an API which is friendly to app developers.  Rather, it provides an API which handles platform and configuration issues, upon which a friendlier API can be built.  In order to use this package, you will need to also add one of the SQLitePCLRaw.provider.* packages and call raw.SetProvider().  Convenience packages are named SQLitePCLRaw.bundle_*.
+

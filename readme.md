@@ -7,10 +7,10 @@ We're focusing on regular SQLite and with SQLCipher.
 
 | Test | Active | Link |
 |------|--------|------|
-| Test.UTSqliteNet        | Yes | https://github.com/praeclarum/sqlite-net/ |
-| Test.UTSqliteNetCipher  | Yes | https://www.nuget.org/packages/sqlite-net-sqlcipher |
-| Test.UTSqlitePcl        | *ToDo* | https://github.com/ericsink/SQLitePCL.raw |
-
+| Test.UTSqliteNet        | Yes | [NuGet]](https://www.nuget.org/packages/sqlite-net-pcl) [GitHub](https://github.com/praeclarum/sqlite-net/) |
+| Test.UTSqliteNetCipher  | Yes | [NuGet](https://www.nuget.org/packages/sqlite-net-sqlcipher) |
+| Test.UTSqlitePcl        | *ToDo* | [GitHub](https://github.com/ericsink/SQLitePCL.raw) |
+| Test.UTAkavatch         | *ToDo* | [NuGet](https://www.nuget.org/packages/akavache) [GitHub](https://github.com/reactiveui/Akavache) |
 
 ## SQLiteNet
 

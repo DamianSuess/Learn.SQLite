@@ -77,7 +77,36 @@ namespace Test.UTSqliteNet
     }
 
     [TestMethod]
-    public void InMemoryRawCreateTableTest()
+    public void InMemory_RawCreate_AllTables_Test()
+    {
+      // open an in memory connection and reset SQLCipher default pragma settings
+      using (var db = new SQLiteConnection(":memory:", true))
+      {
+        db.Execute(@"
+CREATE TABLE TestTable1 (Id INT, ParamValue VARCHAR(32));
+CREATE TABLE TestTable2 (Id INT, ParamValue VARCHAR(32));
+
+INSERT INTO TestTable1 (Id, ParamValue) VALUES (1, 'one');
+INSERT INTO TestTable1 (Id, ParamValue) VALUES (2, 'two');
+
+INSERT INTO TestTable2 (Id, ParamValue) VALUES (1, 'one');
+INSERT INTO TestTable2 (Id, ParamValue) VALUES (2, 'two');
+");
+
+        int cnt = 0;
+        cnt = db.ExecuteScalar<int>("SELECT COUNT(*) FROM TestTable1;");
+        Assert.AreEqual(2, cnt, "Table-1 Invalid row count");
+
+        cnt = db.ExecuteScalar<int>("SELECT COUNT(*) FROM TestTable2;");
+        Assert.AreEqual(2, cnt, "Table-2 Invalid row count");
+
+        var row = db.Table<TestTable>().First();
+        Assert.AreEqual("one", row.ParamValue, "First value was not 'one'");
+      }
+    }
+
+    [TestMethod]
+    public void InMemory_RawCreate_SingleTables_Test()
     {
       // open an in memory connection and reset SQLCipher default pragma settings
       using (var db = new SQLiteConnection(":memory:", true))

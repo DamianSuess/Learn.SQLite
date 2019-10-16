@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.UTSqlitePcl", "Test.UT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.UTSqliteNetCipher", "Test.UTSqliteNetCipher\Test.UTSqliteNetCipher.csproj", "{290E61C6-F939-4567-BDD4-BFCD8FBB7894}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.UTSystemDataSqlite", "Test.UTSystemDataSqlite\Test.UTSystemDataSqlite.csproj", "{91EA0029-1EB5-4C87-B35B-0F5ED663238B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{290E61C6-F939-4567-BDD4-BFCD8FBB7894}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{290E61C6-F939-4567-BDD4-BFCD8FBB7894}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{290E61C6-F939-4567-BDD4-BFCD8FBB7894}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91EA0029-1EB5-4C87-B35B-0F5ED663238B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91EA0029-1EB5-4C87-B35B-0F5ED663238B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91EA0029-1EB5-4C87-B35B-0F5ED663238B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91EA0029-1EB5-4C87-B35B-0F5ED663238B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

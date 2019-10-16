@@ -62,10 +62,16 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NetConnectionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqliteDeepTests.cs" />
+    <Compile Include="SystemTables\sqlite_master.cs" />
+    <Compile Include="SystemTables\sqlite_sequence.cs" />
+    <Compile Include="SystemTables\sqlite_stat1.cs" />
+    <Compile Include="TestTable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

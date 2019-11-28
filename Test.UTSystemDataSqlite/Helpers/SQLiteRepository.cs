@@ -450,22 +450,22 @@ namespace Test.UTSystemDataSqlite.Helpers
     ////  return result;
     ////}
 
-    public List<KeyValuePair<string, string>> GetDatabaseInfo()
-    {
-      List<KeyValuePair<string, string>> valueList = new List<KeyValuePair<string, string>>();
-      SQLiteConnectionStringBuilder sb = new SQLiteConnectionStringBuilder(_cn.ConnectionString);
-
-      valueList.Add(new KeyValuePair<string, string>("Database", sb.DataSource));
-      valueList.Add(new KeyValuePair<string, string>("ServerVersion", _cn.ServerVersion));
-
-      if (File.Exists(sb.DataSource))
-      {
-        FileInfo fi = new FileInfo(sb.DataSource);
-        valueList.Add(new KeyValuePair<string, string>("DatabaseSize", RepositoryHelper.GetSizeReadable(fi.Length)));
-        valueList.Add(new KeyValuePair<string, string>("Created", fi.CreationTime.ToShortDateString() + " " + fi.CreationTime.ToShortTimeString()));
-      }
-      return valueList;
-    }
+    ////public List<KeyValuePair<string, string>> GetDatabaseInfo()
+    ////{
+    ////  List<KeyValuePair<string, string>> valueList = new List<KeyValuePair<string, string>>();
+    ////  SQLiteConnectionStringBuilder sb = new SQLiteConnectionStringBuilder(_cn.ConnectionString);
+    ////
+    ////  valueList.Add(new KeyValuePair<string, string>("Database", sb.DataSource));
+    ////  valueList.Add(new KeyValuePair<string, string>("ServerVersion", _cn.ServerVersion));
+    ////
+    ////  if (File.Exists(sb.DataSource))
+    ////  {
+    ////    FileInfo fi = new FileInfo(sb.DataSource);
+    ////    valueList.Add(new KeyValuePair<string, string>("DatabaseSize", RepositoryHelper.GetSizeReadable(fi.Length)));
+    ////    valueList.Add(new KeyValuePair<string, string>("Created", fi.CreationTime.ToShortDateString() + " " + fi.CreationTime.ToShortTimeString()));
+    ////  }
+    ////  return valueList;
+    ////}
 
     public bool HasIdentityColumn(string tableName)
     {
